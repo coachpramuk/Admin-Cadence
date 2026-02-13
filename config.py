@@ -25,6 +25,9 @@ import os
 
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 
+if not BOT_TOKEN:
+    raise ValueError("BOT_TOKEN не найден! Проверь переменные окружения.")
+
 # TODO: Chat ID администратора — напишите боту /myid в личку, скопируйте число и подставьте сюда
 ADMIN_CHAT_ID = 265416708
 
